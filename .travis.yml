@@ -10,10 +10,10 @@ script:
   - docker run -e CI=true padvd/react-test npm test
 
 after_success:
-  - docker build -t padvd/multi-client ./client
-  - docker build -t padvd/multi-nginx ./nginx
-  - docker build -t padvd/multi-server ./server
-  - docker build -t padvd/multi-worker ./worker
+  - docker build -t dockertje87/multi-client ./client
+  - docker build -t dockertje87/multi-nginx ./nginx
+  - docker build -t dockertje87/multi-server ./server
+  - docker build -t dockertje87/multi-worker ./worker
   # Log in to the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
