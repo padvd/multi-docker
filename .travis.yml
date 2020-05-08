@@ -17,10 +17,10 @@ after_success:
   # Log in to the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push padvd/multi-client
-  - docker push padvd/multi-nginx
-  - docker push padvd/multi-server
-  - docker push padvd/multi-worker
+  - docker push dockertje87d/multi-client
+  - docker push dockertje87/multi-nginx
+  - docker push dockertje87/multi-server
+  - docker push dockertje87/multi-worker
 
 
 
